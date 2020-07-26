@@ -13,7 +13,8 @@
     "prewatch": "npm run clean",
     "watch:contentscript-background": "NODE_ENV=development webpack --config webpack.config.js -w",
     "watch:popup": "npm run watch:build --prefix src/popup",
-    "watch": "npm-run-all --parallel watch:*"
+    "watch": "npm-run-all --parallel watch:*",
+    "zip": "bestzip extension.zip dist/*"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "@types/chrome": "0.0.122",
     "@types/node": "^14.0.26",
     "awesome-typescript-loader": "^5.2.1",
+    "bestzip": "^2.1.5",
     "cpy-cli": "^3.1.1",
     "cra-build-watch": "^3.2.0",
     "css-loader": "^4.0.0",
