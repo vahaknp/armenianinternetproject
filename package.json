@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:contentscript-background": "NODE_ENV=production webpack --config webpack.config.js",
-    "build:popup": "npm run build --prefix src/popup && cd src/popup/build && cpy * /static/* ../../../dist/popup --parents",
-    "build": "npm run build:contentscript-background",
     "clean": "rm -rf dist && cpy manifest.json dist && cpy src/assets/* dist/assets",
     "prebuild": "npm run clean",
+    "build:contentscript-background": "NODE_ENV=production webpack --config webpack.config.js",
+    "build:popup": "INLINE_RUNTIME_CHUNK=false npm run build --prefix src/popup && cd src/popup/build && cpy * /static/* ../../../dist/popup --parents",
+    "build": "npm-run-all build:*",
     "prewatch": "npm run clean",
-    "watch:popup": "npm run watch:build --prefix src/popup",
     "watch:contentscript-background": "NODE_ENV=development webpack --config webpack.config.js -w",
+    "watch:popup": "npm run watch:build --prefix src/popup",
     "watch": "npm-run-all --parallel watch:*"
   },
   "repository": {
@@ -40,7 +40,7 @@
     "ts-node": "^8.10.2",
     "tslint": "^6.1.2",
     "typescript": "^3.9.7",
-    "webpack": "^4.44.0",
+    "webpack": "4.42.0",
     "webpack-cli": "^3.3.12"
   }
 }
