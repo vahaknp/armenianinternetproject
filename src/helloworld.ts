@@ -1,3 +1,5 @@
-export const sum
-= (...a: number[]) =>
-  a.reduce((acc, val) => acc + val, 0);
+import { englishToArmenianBasic } from './letter_maps/english_to_armenian_basic';
+
+export function basicArmenianTransform(toTransform: string) {
+  return englishToArmenianBasic[toTransform];
+}

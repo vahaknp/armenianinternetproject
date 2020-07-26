@@ -1,9 +1,9 @@
-import { sum } from './helloworld';
+import { basicArmenianTransform } from './helloworld';
 
-test('basic', () => {
-  expect(sum()).toBe(0);
+test('basic transform', () => {
+  expect(basicArmenianTransform('a')).toBe('ա');
 });
 
-test('basic again', () => {
-  expect(sum(1, 2)).toBe(3);
+test('basic transform with undefined letter', () => {
+  expect(basicArmenianTransform('ա')).toBe(undefined);
 });
