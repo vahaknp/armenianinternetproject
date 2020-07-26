@@ -1,0 +1,34 @@
+{
+  "name": "armenianinternetproject",
+  "version": "1.0.0",
+  "description": "Represent Armenian on the internet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vahaknp/armenianinternetproject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vahaknp/armenianinternetproject/issues"
+  },
+  "homepage": "https://github.com/vahaknp/armenianinternetproject#readme",
+  "devDependencies": {
+    "@types/chrome": "0.0.122",
+    "@types/node": "^14.0.26",
+    "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^4.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.2",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
