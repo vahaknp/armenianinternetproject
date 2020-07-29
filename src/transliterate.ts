@@ -1,8 +1,7 @@
-const _ = require('lodash'); // TODO: use import, import what you need.
-
+import * as _ from 'lodash';
 import * as armenianBasicMap from './letter_maps/english_to_armenian_basic';
 
-export function basicArmenianTransform(toTransform: string) {
+export function basicArmenianTransform(toTransform: string): string {
   let transformed = toTransform;
 
   _.forEach(armenianBasicMap.englishToArmenianTriplesBasic, (replace, find) => {

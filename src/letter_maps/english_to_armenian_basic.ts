@@ -30,7 +30,7 @@ export const englishToArmenianBasic = {
   k: 'ք',
   // o: 'օ',
   f: 'ֆ',
-}
+};
 
 export const englishToArmenianDoublesBasic = {
   kh: 'խ',
@@ -43,8 +43,8 @@ export const englishToArmenianDoublesBasic = {
   oo: 'ու',
   // ch: 'ջ',
   // ts: 'ձ',
-}
+};
 
 export const englishToArmenianTriplesBasic = {
   yev: 'և',
-}
+};
