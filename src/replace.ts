@@ -4,11 +4,11 @@ import { basicArmenianTransform } from './transliterate';
 export function shouldReplacePreviousWord(keyEvent: KeyboardEvent) {
   console.log('Key event:', keyEvent);
   const { code, key } = keyEvent;
-  if (key !== '' && key !== 'Enter' && code !== 'Enter' && code !== 'Space') return false;
+  if (key !== ' ' && key !== 'Enter' && code !== 'Enter' && code !== 'Space') return false;
   return true;
 }
 
-export function replacePrevWord() {
+export function replacePrevWord(): void {
   const activeElement = <HTMLInputElement>document.activeElement;
   console.log('text:', activeElement.value);
   const lastWord = getLastWord(activeElement);
