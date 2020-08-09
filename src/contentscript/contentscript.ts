@@ -1,8 +1,10 @@
 import './contentscript.scss';
 import * as _ from 'lodash';
+import { basicArmenianTransform } from '../transliterate';
 
 const isThisContentscript = true;
 console.log('isThisContentscript', isThisContentscript);
+console.log('!!!', basicArmenianTransform);
 
 (function () {
   document.onkeydown = (keyEvent) => {
@@ -38,7 +40,7 @@ function getLastWord(activeElement: HTMLInputElement): string {
 }
 
 function getReplacementText(originalText: string, lastWord: string): string {
-  const replacementWord = 'replaced';
+  const replacementWord = basicArmenianTransform(lastWord);
   const newText = originalText.replace(lastWord, replacementWord);
   return newText;
 }
