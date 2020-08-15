@@ -1,5 +1,6 @@
 import * as _ from 'lodash';
 import { basicArmenianTransform } from './transliterate';
+import { spellcheck } from './spellcheck';
 
 export function shouldReplacePreviousWord(keyEvent: KeyboardEvent) {
   console.log('Key event:', keyEvent);
@@ -29,6 +30,9 @@ export function getLastWord(activeElement: HTMLInputElement): string {
 
 export function getReplacementText(originalText: string, lastWord: string): string {
   const replacementWord = basicArmenianTransform(lastWord);
+
+  spellcheck(replacementWord);
+
   const newText = originalText.replace(lastWord, replacementWord);
   return newText;
 }
