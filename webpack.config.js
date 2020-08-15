@@ -52,7 +52,7 @@ module.exports = {
     }),
     new ProvidePlugin({ BrowserFS: 'bfsGlobal', process: 'processGlobal', Buffer: 'bufferGlobal' }),
     new CopyPlugin({
-      patterns: [{ from: 'src/dictionaries', to: 'dictionaries' }],
+      patterns: [{ from: 'src/dictionaries', to: 'dist' }],
     }),
   ],
   resolve: {
